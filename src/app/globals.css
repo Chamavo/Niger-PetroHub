@@ -8,11 +8,11 @@
   --background-card: #FFFFFF;
   --accent-orange: #E8501A;
   --accent-green: #2E6B2E;
-  --text-primary: #1C1C1C;
+  --text-primary: #1A3D1A;
   --text-secondary: #4A4A4A;
   --text-muted: #7A7A7A;
   --border: #D5CFC4;
-  --nav: #1C1C1C;
+  --nav: #1A3D1A;
 }
 
 @layer base {

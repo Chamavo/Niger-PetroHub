@@ -21,7 +21,7 @@ export default function HomePage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/75 z-10" />
         </div>
 
         <div className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center">

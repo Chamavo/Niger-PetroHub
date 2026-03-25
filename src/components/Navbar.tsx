@@ -12,7 +12,6 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: t.nav.home, href: "/" },
     { name: t.nav.blocks, href: "/blocks" },
     { name: t.nav.geology, href: "/geology" },
     { name: t.nav.invest, href: "/invest" },
@@ -21,7 +20,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-[#1C1C1C] backdrop-blur-md border-b border-white/10">
+    <nav className="sticky top-0 z-50 w-full bg-nav backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
