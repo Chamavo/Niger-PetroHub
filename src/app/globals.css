@@ -17,8 +17,7 @@
 
 @layer base {
   body {
-    background-color: var(--background-primary) !important;
-    color: var(--text-primary) !important;
+    @apply bg-background-primary text-text-primary antialiased;
   }
 }
 
