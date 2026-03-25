@@ -38,12 +38,12 @@ export default function BlocksPage() {
           <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-white px-4">
             {t.blocksPage.title}
           </h1>
-          <div className="h-1 w-24 bg-accent mx-auto" />
+          <div className="h-1 w-24 bg-accent-green mx-auto" />
         </div>
       </section>
 
       {/* Intro & Filter Bar */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12">
             <div className="max-w-xl">
@@ -51,7 +51,7 @@ export default function BlocksPage() {
                 {t.blocksPage.intro} The Nigerien government offers standardized terms for exploration through Production Sharing Contracts (PSC).
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 bg-secondary p-1 border border-border rounded-sm">
+            <div className="flex flex-wrap gap-2 bg-background-secondary p-1 border border-border rounded-sm">
               <FilterButton 
                 active={activeFilter === "all"} 
                 onClick={() => setActiveFilter("all")}
@@ -75,7 +75,7 @@ export default function BlocksPage() {
             {filteredBlocks.map((block) => (
               <div 
                 key={block.id}
-                className="group relative bg-secondary border border-border hover:border-accent/50 transition-all p-8 flex flex-col gap-6"
+                className="group relative bg-background-secondary border border-border hover:border-accent-orange/50 transition-all p-8 flex flex-col gap-6"
               >
                 <div className="space-y-2">
                   <div className="flex justify-between items-start">
@@ -84,51 +84,51 @@ export default function BlocksPage() {
                     }`}>
                       {block.status === 'open' ? 'Open' : 'Under Study'}
                     </span>
-                    <span className="text-[10px] font-medium text-foreground/30 uppercase tracking-widest">
+                    <span className="text-[10px] font-medium text-text-secondary/30 uppercase tracking-widest">
                        {block.basin === 'oriental' ? 'Basin Oriental' : 'Basin Occidental'}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors">
+                  <h3 className="text-xl font-bold text-text-primary group-hover:text-accent-orange transition-colors">
                     {block.name}
                   </h3>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 border-y border-border py-4 my-2 text-xs">
                   <div>
-                    <span className="block text-foreground/30 uppercase tracking-widest mb-1">{t.blocksPage.area}</span>
+                    <span className="block text-text-secondary/30 uppercase tracking-widest mb-1">{t.blocksPage.area}</span>
                     <span className="font-bold">{block.area} km²</span>
                   </div>
                   <div>
-                    <span className="block text-foreground/30 uppercase tracking-widest mb-1">Data</span>
+                    <span className="block text-text-secondary/30 uppercase tracking-widest mb-1">Data</span>
                     <span className="font-bold">{block.seismic}</span>
                   </div>
                 </div>
 
                 <button 
                   onClick={() => setLockedBlock(block.id)}
-                  className="w-full bg-border hover:bg-accent hover:text-primary py-3 rounded-sm text-xs font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2"
+                  className="w-full bg-border hover:bg-accent-orange hover:text-text-primary py-3 rounded-sm text-xs font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-2"
                 >
                   {t.blocksPage.viewData}
                 </button>
 
                 {/* Locked Overlay */}
                 {lockedBlock === block.id && (
-                  <div className="absolute inset-0 z-30 bg-background/95 backdrop-blur-sm p-8 flex flex-col items-center justify-center text-center animate-in fade-in zoom-in duration-300">
-                    <div className="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mb-4">
-                      <Lock className="text-accent" size={24} />
+                  <div className="absolute inset-0 z-30 bg-background-primary/95 backdrop-blur-sm p-8 flex flex-col items-center justify-center text-center animate-in fade-in zoom-in duration-300">
+                    <div className="w-12 h-12 bg-accent-green/20 rounded-full flex items-center justify-center mb-4">
+                      <Lock className="text-accent-green" size={24} />
                     </div>
-                    <p className="text-sm font-medium text-foreground mb-6 max-w-[200px]">
+                    <p className="text-sm font-medium text-text-primary mb-6 max-w-[200px]">
                        {t.blocksPage.locked}
                     </p>
                     <div className="flex flex-col w-full gap-2">
                       <button 
-                        className="bg-accent text-primary py-3 rounded-sm text-[10px] font-bold uppercase tracking-tighter"
+                        className="bg-accent-orange text-text-primary py-3 rounded-sm text-[10px] font-bold uppercase tracking-tighter"
                         onClick={() => setLockedBlock(null)}
                       >
                          Apply for Subscription
                       </button>
                       <button 
-                        className="text-foreground/40 hover:text-foreground py-2 text-[10px] font-bold uppercase"
+                        className="text-text-secondary/40 hover:text-text-primary py-2 text-[10px] font-bold uppercase"
                         onClick={() => setLockedBlock(null)}
                       >
                         Dismiss
@@ -141,14 +141,14 @@ export default function BlocksPage() {
           </div>
 
           {/* CTA Banner */}
-          <div className="mt-24 p-12 bg-accent relative overflow-hidden flex flex-col items-center text-center gap-8">
+          <div className="mt-24 p-12 bg-accent-orange relative overflow-hidden flex flex-col items-center text-center gap-8">
              <div className="absolute top-0 right-0 p-8 opacity-10">
                <PlaceholderImage src="/logo-ministere-petrole-niger.png" alt="Logo" width={200} height={200} />
              </div>
-             <h2 className="text-2xl md:text-3xl font-black text-primary uppercase tracking-tight max-w-2xl relative z-10">
+             <h2 className="text-2xl md:text-3xl font-black text-text-primary uppercase tracking-tight max-w-2xl relative z-10">
                {t.blocksPage.cta}
              </h2>
-             <button className="bg-primary text-accent px-10 py-4 rounded-sm font-bold uppercase tracking-widest hover:scale-105 transition-transform relative z-10">
+             <button className="bg-background-primary text-accent-orange px-10 py-4 rounded-sm font-bold uppercase tracking-widest hover:scale-105 transition-transform relative z-10">
                {t.blocksPage.subscribe}
              </button>
           </div>
@@ -163,7 +163,7 @@ function FilterButton({ active, onClick, label }: { active: boolean; onClick: ()
     <button
       onClick={onClick}
       className={`px-6 py-2.5 rounded-sm text-xs font-bold uppercase tracking-widest transition-all ${
-        active ? "bg-accent text-primary" : "text-foreground/40 hover:text-foreground"
+        active ? "bg-accent-orange text-text-primary" : "text-text-secondary/40 hover:text-text-primary"
       }`}
     >
       {label}

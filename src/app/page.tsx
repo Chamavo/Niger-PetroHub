@@ -34,31 +34,31 @@ export default function HomePage() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-4 uppercase">
             {t.hero.title}
           </h1>
-          <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mb-10">
+          <p className="text-lg md:text-xl text-text-secondary/80 max-w-2xl mb-10">
             {t.hero.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-accent hover:bg-accent/90 text-primary px-8 py-4 rounded-sm font-bold uppercase transition-all flex items-center gap-2">
+            <button className="bg-accent-orange hover:bg-accent-orange/90 text-text-primary px-8 py-4 rounded-sm font-bold uppercase transition-all flex items-center gap-2">
               {t.hero.explore} <ArrowRight size={18} />
             </button>
-            <button className="border border-accent text-accent hover:bg-accent hover:text-primary px-8 py-4 rounded-sm font-bold uppercase transition-all">
+            <button className="border border-accent-orange text-accent-orange hover:bg-accent-orange hover:text-text-primary px-8 py-4 rounded-sm font-bold uppercase transition-all">
               {t.hero.request}
             </button>
           </div>
         </div>
 
         {/* Language Switcher Overlay (Top Right Sticky) */}
-        <div className="absolute top-8 right-8 z-50 bg-background/20 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full hidden lg:block">
+        <div className="absolute top-8 right-8 z-50 bg-background-primary/20 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full hidden lg:block">
            <div className="flex gap-4 text-xs font-bold uppercase">
-             <button className="hover:text-accent transition-colors">FR</button>
-             <button className="hover:text-accent transition-colors">EN</button>
-             <button className="hover:text-accent transition-colors">AR</button>
+             <button className="hover:text-accent-orange transition-colors">FR</button>
+             <button className="hover:text-accent-orange transition-colors">EN</button>
+             <button className="hover:text-accent-orange transition-colors">AR</button>
            </div>
         </div>
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-secondary border-y border-border py-12">
+      <section className="bg-background-secondary border-y border-border py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <StatItem value="~2B" label={t.stats.reserves} />
@@ -70,22 +70,22 @@ export default function HomePage() {
       </section>
 
       {/* Niger's Petroleum Potential */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight text-accent">
+              <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight text-accent-orange">
                 {t.potential.title}
               </h2>
-              <div className="space-y-6 text-foreground/70 leading-relaxed md:text-lg">
+              <div className="space-y-6 text-text-secondary/70 leading-relaxed md:text-lg">
                 <p>{t.potential.p1}</p>
                 <p>{t.potential.p2}</p>
                 <p>{t.potential.p3}</p>
               </div>
             </div>
             <div className="relative group">
-              <div className="absolute -inset-4 border border-accent/20 translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500" />
-              <div className="border-4 border-accent p-1">
+              <div className="absolute -inset-4 border border-accent-orange/20 translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500" />
+              <div className="border-4 border-accent-orange p-1">
                 <PlaceholderImage
                   src="/map-bassins-niger.jpg"
                   alt="Map Bassins Niger"
@@ -100,26 +100,26 @@ export default function HomePage() {
       </section>
 
       {/* Why Invest in Niger */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-background-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight text-accent text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight text-accent-orange text-center mb-16">
             {t.whyInvest.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <WhyInvestCard 
-              icon={<Zap className="text-accent" size={32} />} 
+              icon={<Zap className="text-accent-green" size={32} />} 
               text={t.whyInvest.cost} 
             />
             <WhyInvestCard 
-              icon={<Globe className="text-accent" size={32} />} 
+              icon={<Globe className="text-accent-green" size={32} />} 
               text={t.whyInvest.attribution} 
             />
             <WhyInvestCard 
-              icon={<Gavel className="text-accent" size={32} />} 
+              icon={<Gavel className="text-accent-green" size={32} />} 
               text={t.whyInvest.legal} 
             />
             <WhyInvestCard 
-              icon={<ShieldCheck className="text-accent" size={32} />} 
+              icon={<ShieldCheck className="text-accent-green" size={32} />} 
               text={t.whyInvest.infrastructure} 
             />
           </div>
@@ -127,9 +127,9 @@ export default function HomePage() {
       </section>
 
       {/* Active Operators */}
-      <section className="py-20 border-y border-border bg-background">
+      <section className="py-20 border-y border-border bg-background-primary">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h3 className="text-xs font-bold uppercase tracking-[0.3em] text-foreground/40 mb-12">
+          <h3 className="text-xs font-bold uppercase tracking-[0.3em] text-text-secondary/40 mb-12">
             {t.operators.title}
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
@@ -145,10 +145,10 @@ export default function HomePage() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-12">
-            <h2 className="text-3xl font-bold uppercase tracking-tight text-accent">
+            <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-orange">
               Latest News
             </h2>
-            <button className="text-accent hover:underline text-sm font-bold uppercase tracking-widest">
+            <button className="text-accent-orange hover:underline text-sm font-bold uppercase tracking-widest">
               View All
             </button>
           </div>
@@ -178,10 +178,10 @@ export default function HomePage() {
 function StatItem({ value, label }: { value: string; label: string }) {
   return (
     <div className="text-center space-y-2">
-      <div className="text-4xl md:text-5xl font-black text-accent tracking-tighter">
+      <div className="text-4xl md:text-5xl font-black text-accent-orange tracking-tighter">
         {value}
       </div>
-      <div className="text-[10px] md:text-xs uppercase tracking-widest text-foreground/40 font-bold max-w-[120px] mx-auto">
+      <div className="text-[10px] md:text-xs uppercase tracking-widest text-text-secondary/40 font-bold max-w-[120px] mx-auto">
         {label}
       </div>
     </div>
@@ -190,11 +190,11 @@ function StatItem({ value, label }: { value: string; label: string }) {
 
 function WhyInvestCard({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
-    <div className="bg-background p-8 border border-border flex items-start gap-6 hover:border-accent/40 transition-colors group">
-      <div className="p-4 bg-accent/5 rounded-sm group-hover:bg-accent/10 transition-colors">
+    <div className="bg-background-primary p-8 border border-border flex items-start gap-6 hover:border-accent-orange/40 transition-colors group">
+      <div className="p-4 bg-accent-orange/5 rounded-sm group-hover:bg-accent-orange/10 transition-colors">
         {icon}
       </div>
-      <p className="text-lg font-medium text-foreground/80 leading-snug">
+      <p className="text-lg font-medium text-text-secondary/80 leading-snug">
         {text}
       </p>
     </div>
@@ -203,17 +203,17 @@ function WhyInvestCard({ icon, text }: { icon: React.ReactNode; text: string }) 
 
 function NewsCard({ date, title, excerpt }: { date: string; title: string; excerpt: string }) {
   return (
-    <div className="bg-secondary border border-border p-8 flex flex-col gap-6 hover:bg-border/20 transition-all cursor-pointer group">
+    <div className="bg-background-secondary border border-border p-8 flex flex-col gap-6 hover:bg-border/20 transition-all cursor-pointer group">
       <div className="space-y-4">
-        <span className="text-[10px] font-bold text-accent uppercase tracking-widest">{date}</span>
-        <h3 className="text-xl font-bold leading-tight group-hover:text-accent transition-colors">
+        <span className="text-[10px] font-bold text-accent-orange uppercase tracking-widest">{date}</span>
+        <h3 className="text-xl font-bold leading-tight group-hover:text-accent-orange transition-colors">
           {title}
         </h3>
-        <p className="text-sm text-foreground/50 line-clamp-2">
+        <p className="text-sm text-text-secondary/50 line-clamp-2">
           {excerpt}
         </p>
       </div>
-      <div className="mt-auto flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-foreground/40 group-hover:text-accent">
+      <div className="mt-auto flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-text-secondary/40 group-hover:text-accent-orange">
         Read More <ArrowRight size={14} />
       </div>
     </div>

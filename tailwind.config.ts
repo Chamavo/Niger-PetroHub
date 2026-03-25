@@ -9,12 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A0A",
-        foreground: "#E8E0CC",
-        primary: "#0A0A0A",
-        accent: "#C9A84C",
-        secondary: "#111111",
-        border: "#2A2A2A",
+        background: {
+          primary: '#1A1A1A',
+          secondary: '#222222',
+          card: '#2A2A2A',
+        },
+        accent: {
+          orange: '#E8501A',
+          green: '#3A7D3A',
+          'green-light': '#4A9A4A',
+        },
+        text: {
+          primary: '#FFFFFF',
+          secondary: '#E8E0CC',
+          muted: '#A0A0A0',
+        },
+        border: '#333333',
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],

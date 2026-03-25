@@ -25,14 +25,14 @@ export default function InvestPage() {
           <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-white px-4">
             {t.investPage.title}
           </h1>
-          <div className="h-1 w-24 bg-accent mx-auto" />
+          <div className="h-1 w-24 bg-accent-green mx-auto" />
         </div>
       </section>
 
       {/* Legal Framework */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold uppercase tracking-tight text-accent text-center mb-16">
+          <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-orange text-center mb-16">
             {t.investPage.legal}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -56,17 +56,17 @@ export default function InvestPage() {
       </section>
 
       {/* Fiscal Terms Table */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-background-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold uppercase tracking-tight text-accent text-center mb-16">
+          <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-orange text-center mb-16">
             {t.investPage.fiscal}
           </h2>
           <div className="overflow-x-auto border border-border">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-background border-b border-border">
-                  <th className="p-6 text-xs font-bold uppercase tracking-widest text-accent">Item</th>
-                  <th className="p-6 text-xs font-bold uppercase tracking-widest text-accent">Terms</th>
+                <tr className="bg-background-primary border-b border-border">
+                  <th className="p-6 text-xs font-bold uppercase tracking-widest text-accent-orange">Item</th>
+                  <th className="p-6 text-xs font-bold uppercase tracking-widest text-accent-orange">Terms</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border/50">
@@ -84,9 +84,9 @@ export default function InvestPage() {
       </section>
 
       {/* Infrastructure */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold uppercase tracking-tight text-accent text-center mb-16">
+          <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-orange text-center mb-16">
             {t.investPage.infrastructure}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -107,12 +107,12 @@ export default function InvestPage() {
       {/* Final CTA */}
       <section className="pb-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
-           <div className="bg-accent/5 p-12 border border-accent/20 rounded-sm">
-             <Landmark className="text-accent mx-auto mb-6" size={48} />
-             <h3 className="text-2xl font-bold text-foreground mb-4 uppercase">
+           <div className="bg-accent-green/5 p-12 border border-accent-green/20 rounded-sm">
+             <Landmark className="text-accent-green mx-auto mb-6" size={48} />
+             <h3 className="text-2xl font-bold text-text-primary mb-4 uppercase">
                {t.investPage.cta}
              </h3>
-             <button className="bg-accent text-primary px-10 py-4 rounded-sm font-bold uppercase tracking-widest hover:bg-accent/90 transition-colors">
+             <button className="bg-accent-orange text-text-primary px-10 py-4 rounded-sm font-bold uppercase tracking-widest hover:bg-accent-orange/90 transition-colors">
                {t.investPage.contact}
              </button>
            </div>
@@ -124,10 +124,10 @@ export default function InvestPage() {
 
 function LegalCard({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
   return (
-    <div className="p-8 bg-secondary border border-border space-y-4 hover:border-accent/40 transition-colors">
-      <div className="text-accent">{icon}</div>
-      <h3 className="text-xl font-bold text-foreground uppercase tracking-tight">{title}</h3>
-      <p className="text-sm text-foreground/50 leading-relaxed">{desc}</p>
+    <div className="p-8 bg-background-secondary border border-border space-y-4 hover:border-accent-green/40 transition-colors">
+      <div className="text-accent-green">{icon}</div>
+      <h3 className="text-xl font-bold text-text-primary uppercase tracking-tight">{title}</h3>
+      <p className="text-sm text-text-secondary/50 leading-relaxed">{desc}</p>
     </div>
   );
 }
@@ -135,15 +135,15 @@ function LegalCard({ icon, title, desc }: { icon: React.ReactNode; title: string
 function FiscalRow({ item, terms }: { item: string; terms: string }) {
   return (
     <tr className="hover:bg-white/5 transition-colors">
-      <td className="p-6 text-sm font-bold text-foreground/80">{item}</td>
-      <td className="p-6 text-sm text-foreground/60">{terms}</td>
+      <td className="p-6 text-sm font-bold text-text-secondary/80">{item}</td>
+      <td className="p-6 text-sm text-text-secondary/60">{terms}</td>
     </tr>
   );
 }
 
 function InfrastructureCard({ image, title, desc }: { image: string; title: string; desc: string }) {
   return (
-    <div className="group overflow-hidden border border-border bg-secondary">
+    <div className="group overflow-hidden border border-border bg-background-secondary">
       <div className="h-64 overflow-hidden">
         <PlaceholderImage 
           src={image} 
@@ -153,8 +153,8 @@ function InfrastructureCard({ image, title, desc }: { image: string; title: stri
         />
       </div>
       <div className="p-8 space-y-4">
-        <h3 className="text-xl font-bold text-accent uppercase tracking-tight">{title}</h3>
-        <p className="text-sm text-foreground/60 leading-relaxed">{desc}</p>
+        <h3 className="text-xl font-bold text-accent-orange uppercase tracking-tight">{title}</h3>
+        <p className="text-sm text-text-secondary/60 leading-relaxed">{desc}</p>
       </div>
     </div>
   );

@@ -25,19 +25,19 @@ export default function GeologyPage() {
           <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-white px-4">
             {t.geologyPage.title}
           </h1>
-          <div className="h-1 w-24 bg-accent mx-auto" />
+          <div className="h-1 w-24 bg-accent-green mx-auto" />
         </div>
       </section>
 
       {/* Basin Oriental */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl font-bold uppercase tracking-tight text-accent">
+              <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-orange">
                 {t.geologyPage.oriental}
               </h2>
-              <p className="text-lg text-foreground/70 leading-relaxed">
+              <p className="text-lg text-text-secondary/70 leading-relaxed">
                 The Oriental Basin, primarily the Termit Rift, is Niger&apos;s most prolific oil province. It features a sequence of Cretaceous to Tertiary sediments with excellent reservoir properties in the Sokor and Madama formations.
               </p>
               <div className="grid grid-cols-2 gap-8 py-6 border-y border-border">
@@ -48,13 +48,13 @@ export default function GeologyPage() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {["Sokor", "Madama", "Yogou"].map(fm => (
-                  <span key={fm} className="text-[10px] font-bold uppercase tracking-widest border border-accent/30 text-accent/60 px-3 py-1 rounded-full">
+                  <span key={fm} className="text-[10px] font-bold uppercase tracking-widest border border-accent-orange/30 text-accent-orange/60 px-3 py-1 rounded-full">
                     {fm} Formation
                   </span>
                 ))}
               </div>
             </div>
-            <div className="border border-border p-2 bg-secondary">
+            <div className="border border-border p-2 bg-background-secondary">
                <PlaceholderImage 
                 src="/photo-soraz-refinery.jpg" 
                 alt="Oriental Basin" 
@@ -68,10 +68,10 @@ export default function GeologyPage() {
       </section>
 
       {/* Basin Occidental */}
-      <section className="py-24 bg-secondary">
+      <section className="py-24 bg-background-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 border border-border p-2 bg-background">
+            <div className="order-2 lg:order-1 border border-border p-2 bg-background-primary">
                <PlaceholderImage 
                 src="/photo-pipeline-agadem.jpg" 
                 alt="Occidental Basin" 
@@ -81,10 +81,10 @@ export default function GeologyPage() {
               />
             </div>
             <div className="order-1 lg:order-2 space-y-8">
-              <h2 className="text-3xl font-bold uppercase tracking-tight text-accent">
+              <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-orange">
                 {t.geologyPage.occidental}
               </h2>
-              <p className="text-lg text-foreground/70 leading-relaxed">
+              <p className="text-lg text-text-secondary/70 leading-relaxed">
                 The Occidental Basin, including the Iullemmeden and Tamesna basins, represents Niger&apos;s frontier potential. While under-explored compared to the East, initial surveys indicate significant structural traps and source rock maturity.
               </p>
               <div className="grid grid-cols-2 gap-8 py-6 border-y border-border">
@@ -99,13 +99,13 @@ export default function GeologyPage() {
       </section>
 
       {/* Data Available in CDP */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold uppercase tracking-tight text-accent mb-4">
+            <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-orange mb-4">
               {t.geologyPage.dataAvailable}
             </h2>
-            <p className="text-foreground/50 max-w-2xl mx-auto uppercase tracking-widest text-[10px] font-bold">
+            <p className="text-text-secondary/50 max-w-2xl mx-auto uppercase tracking-widest text-[10px] font-bold">
               The Central Data Repository (CDP) holds a comprehensive set of geophysical and geological assets.
             </p>
           </div>
@@ -118,7 +118,7 @@ export default function GeologyPage() {
           </div>
 
           <div className="mt-20 flex flex-col items-center">
-             <button className="bg-accent text-primary px-12 py-5 rounded-sm font-bold uppercase tracking-widest shadow-xl shadow-accent/10 hover:shadow-accent/20 transition-all">
+             <button className="bg-accent-orange text-text-primary px-12 py-5 rounded-sm font-bold uppercase tracking-widest shadow-xl shadow-accent-orange/10 hover:shadow-accent-orange/20 transition-all">
                 {t.geologyPage.cta}
              </button>
           </div>
@@ -131,19 +131,19 @@ export default function GeologyPage() {
 function StatBox({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <span className="block text-[10px] uppercase tracking-widest text-foreground/40 font-bold mb-1">{label}</span>
-      <span className="text-xl font-bold text-foreground">{value}</span>
+      <span className="block text-[10px] uppercase tracking-widest text-text-secondary/40 font-bold mb-1">{label}</span>
+      <span className="text-xl font-bold text-text-primary">{value}</span>
     </div>
   );
 }
 
 function DataItem({ icon, title, value }: { icon: React.ReactNode; title: string; value: string }) {
   return (
-    <div className="bg-secondary p-8 border border-border flex flex-col items-center text-center gap-4 group hover:bg-accent/5 transition-all">
-       <div className="text-accent group-hover:scale-110 transition-transform">{icon}</div>
+    <div className="bg-background-secondary p-8 border border-border flex flex-col items-center text-center gap-4 group hover:bg-accent-green/5 transition-all">
+       <div className="text-accent-green group-hover:scale-110 transition-transform">{icon}</div>
        <div>
-         <span className="block text-2xl font-black text-foreground tracking-tighter">{value}</span>
-         <span className="text-[10px] font-bold uppercase tracking-widest text-foreground/40">{title}</span>
+         <span className="block text-2xl font-black text-text-primary tracking-tighter">{value}</span>
+         <span className="text-[10px] font-bold uppercase tracking-widest text-text-secondary/40">{title}</span>
        </div>
     </div>
   );

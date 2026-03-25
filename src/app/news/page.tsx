@@ -33,14 +33,14 @@ export default function NewsPage() {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-background min-h-screen">
+    <div className="flex flex-col w-full bg-background-primary min-h-screen">
       {/* Page Header */}
-      <section className="py-24 border-b border-border bg-secondary/30">
+      <section className="py-24 border-b border-border bg-background-secondary/30">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-accent mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-accent-orange mb-6">
             {t.newsPage.title}
           </h1>
-          <div className="h-1 w-24 bg-accent mx-auto" />
+          <div className="h-1 w-24 bg-accent-green mx-auto" />
         </div>
       </section>
 
@@ -57,17 +57,17 @@ export default function NewsPage() {
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute top-4 left-4 bg-background/80 backdrop-blur-md px-3 py-1 text-[10px] font-bold text-accent uppercase tracking-widest flex items-center gap-2">
+                  <div className="absolute top-4 left-4 bg-background-primary/80 backdrop-blur-md px-3 py-1 text-[10px] font-bold text-accent-orange uppercase tracking-widest flex items-center gap-2">
                     <Calendar size={12} /> {news.date}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-4 leading-tight group-hover:text-accent transition-colors">
+                <h3 className="text-xl font-bold text-text-primary mb-4 leading-tight group-hover:text-accent-orange transition-colors">
                    {news.title}
                 </h3>
-                <p className="text-sm text-foreground/50 leading-relaxed mb-6 line-clamp-3">
+                <p className="text-sm text-text-secondary/50 leading-relaxed mb-6 line-clamp-3">
                   {news.excerpt}
                 </p>
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent/60 group-hover:text-accent">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-accent-orange/60 group-hover:text-accent-orange">
                   {t.newsPage.readMore} <ChevronRight size={16} />
                 </div>
               </article>
@@ -77,17 +77,17 @@ export default function NewsPage() {
       </section>
 
       {/* Newsletter Signup Section */}
-      <section className="py-24 bg-secondary border-t border-border mt-auto">
+      <section className="py-24 bg-background-secondary border-t border-border mt-auto">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-12 bg-background p-12 border border-accent/20">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12 bg-background-primary p-12 border border-accent-green/20">
              <div className="space-y-4 text-center md:text-left">
-               <div className="flex items-center justify-center md:justify-start gap-4 text-accent">
+               <div className="flex items-center justify-center md:justify-start gap-4 text-accent-green">
                  <Mail size={32} />
-                 <h2 className="text-2xl font-bold uppercase tracking-tight text-foreground">
+                 <h2 className="text-2xl font-bold uppercase tracking-tight text-text-primary">
                    Sector Newsletter
                  </h2>
                </div>
-               <p className="text-sm text-foreground/50 max-w-sm">
+               <p className="text-sm text-text-secondary/50 max-w-sm">
                  Stay updated on legal updates, new block attributions, and sector milestones.
                </p>
              </div>
@@ -96,10 +96,10 @@ export default function NewsPage() {
                  <input 
                   type="email" 
                   placeholder="name@company.com"
-                  className="bg-secondary border border-border p-4 pr-12 text-sm focus:border-accent outline-none text-foreground/70 w-full sm:w-80 rounded-none transition-colors"
+                  className="bg-background-secondary border border-border p-4 pr-12 text-sm focus:border-accent-orange outline-none text-text-secondary/70 w-full sm:w-80 rounded-none transition-colors"
                  />
                </div>
-               <button className="bg-accent hover:bg-accent/90 text-primary px-8 py-4 font-bold uppercase text-xs tracking-widest whitespace-nowrap transition-all">
+               <button className="bg-accent-orange hover:bg-accent-orange/90 text-text-primary px-8 py-4 font-bold uppercase text-xs tracking-widest whitespace-nowrap transition-all">
                  {t.newsPage.newsletter}
                </button>
              </form>

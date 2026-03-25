@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <body className="bg-background text-foreground antialiased selection:bg-accent selection:text-primary overflow-x-hidden">
+       <body className="bg-background-primary text-text-secondary antialiased selection:bg-accent-orange selection:text-text-primary overflow-x-hidden">
         <I18nProvider>
           <LayoutWrapper interVar={inter.variable} notoVar={notoArabic.variable}>
             {children}
