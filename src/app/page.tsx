@@ -20,41 +20,28 @@ export default function HomePage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-background-primary/40 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10" />
         </div>
 
         <div className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center">
-           <PlaceholderImage
-            src="/logo-ministere-petrole-niger.png"
-            alt="Ministère du Pétrole"
-            width={80}
-            height={80}
-            className="mb-8 object-contain"
-          />
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-text-primary mb-4 uppercase">
+
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-4 uppercase">
             {t.hero.title}
           </h1>
-          <p className="text-lg md:text-xl text-text-secondary max-w-2xl mb-10">
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10">
             {t.hero.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button className="bg-accent-orange hover:bg-accent-orange/90 text-white px-8 py-4 rounded-sm font-bold uppercase transition-all flex items-center gap-2">
               {t.hero.explore} <ArrowRight size={18} />
             </button>
-            <button className="border border-accent-orange text-accent-orange hover:bg-accent-orange hover:text-white px-8 py-4 rounded-sm font-bold uppercase transition-all">
+            <button className="border border-white text-white hover:bg-white hover:text-accent-orange px-8 py-4 rounded-sm font-bold uppercase transition-all">
               {t.hero.request}
             </button>
           </div>
         </div>
 
-        {/* Language Switcher Overlay (Top Right Sticky) */}
-        <div className="absolute top-8 right-8 z-50 bg-background-card/80 backdrop-blur-sm border border-border px-4 py-2 rounded-full hidden lg:block">
-           <div className="flex gap-4 text-xs font-bold uppercase">
-             <button className="hover:text-accent-orange transition-colors">FR</button>
-             <button className="hover:text-accent-orange transition-colors">EN</button>
-             <button className="hover:text-accent-orange transition-colors">AR</button>
-           </div>
-        </div>
+
       </section>
 
       {/* Stats Bar */}
