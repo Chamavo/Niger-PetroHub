@@ -45,10 +45,10 @@ export default function BlocksPage() {
       {/* Intro & Filter Bar */}
       <section className="py-16 bg-background-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12">
-            <div className="max-w-xl">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12 rtl:lg:flex-row-reverse">
+            <div className="max-w-xl rtl:text-right">
               <p className="text-lg text-text-secondary leading-relaxed">
-                {t.blocksPage.intro} The Nigerien government offers standardized terms for exploration through Production Sharing Contracts (PSC).
+                {t.blocksPage.intro}
               </p>
             </div>
             <div className="flex flex-wrap gap-2 bg-background-secondary p-1 border border-border rounded-sm">
@@ -75,17 +75,17 @@ export default function BlocksPage() {
             {filteredBlocks.map((block) => (
               <div 
                 key={block.id}
-                className="group relative bg-background-card border border-border hover:border-accent-orange/50 transition-all p-8 flex flex-col gap-6"
+                className="group relative bg-background-card border border-border hover:border-accent-orange/50 transition-all p-8 flex flex-col gap-6 rtl:text-right"
               >
                 <div className="space-y-2">
-                  <div className="flex justify-between items-start">
+                  <div className="flex justify-between items-start rtl:flex-row-reverse">
                     <span className={`text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded-sm ${
                       block.status === 'open' ? 'bg-green-500/10 text-green-500' : 'bg-white/5 text-white/40'
                     }`}>
-                      {block.status === 'open' ? 'Open' : 'Under Study'}
+                      {block.status === 'open' ? t.blocksPage.available : t.blocksPage.status}
                     </span>
                     <span className="text-[10px] font-medium text-text-muted uppercase tracking-widest">
-                       {block.basin === 'oriental' ? 'Basin Oriental' : 'Basin Occidental'}
+                       {block.basin === 'oriental' ? t.blocksPage.filterOriental : t.blocksPage.filterOccidental}
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-text-primary group-hover:text-accent-orange transition-colors">
@@ -94,12 +94,12 @@ export default function BlocksPage() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 border-y border-border py-4 my-2 text-xs">
-                  <div>
+                  <div className="rtl:text-right">
                     <span className="block text-text-muted uppercase tracking-widest mb-1">{t.blocksPage.area}</span>
                     <span className="font-bold">{block.area} km²</span>
                   </div>
-                  <div>
-                    <span className="block text-text-muted uppercase tracking-widest mb-1">Data</span>
+                  <div className="rtl:text-right">
+                    <span className="block text-text-muted uppercase tracking-widest mb-1">{t.blocksPage.data}</span>
                     <span className="font-bold">{block.seismic}</span>
                   </div>
                 </div>
@@ -125,13 +125,13 @@ export default function BlocksPage() {
                         className="bg-accent-orange text-white py-3 rounded-sm text-[10px] font-bold uppercase tracking-tighter"
                         onClick={() => setLockedBlock(null)}
                       >
-                         Apply for Subscription
+                         {t.blocksPage.subscribe}
                       </button>
                       <button 
                         className="text-text-muted hover:text-text-primary py-2 text-[10px] font-bold uppercase"
                         onClick={() => setLockedBlock(null)}
                       >
-                        Dismiss
+                        {t.newsPage.join}
                       </button>
                     </div>
                   </div>
@@ -142,7 +142,7 @@ export default function BlocksPage() {
 
           {/* CTA Banner */}
           <div className="mt-24 p-12 bg-accent-orange relative overflow-hidden flex flex-col items-center text-center gap-8">
-             <div className="absolute top-0 right-0 p-8 opacity-10">
+             <div className="absolute top-0 right-0 p-8 opacity-10 rtl:right-auto rtl:left-0">
                <PlaceholderImage src="/logo-ministere-petrole-niger.png" alt="Logo" width={200} height={200} />
              </div>
              <h2 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tight max-w-2xl relative z-10">

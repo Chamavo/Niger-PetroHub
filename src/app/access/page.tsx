@@ -29,10 +29,10 @@ export default function AccessPage() {
               price="$5,000"
               period="/ year"
               features={[
-                "Block summary sheets (all 37 blocks)",
-                "Basin overview maps",
-                "Legal framework documents",
-                "Sector news bulletin"
+                t.accessPage.features.basicBlocks,
+                t.potential.title,
+                t.investPage.legal,
+                t.newsPage.title
               ]}
               buttonText={t.accessPage.subscribe}
               variant="outline"
@@ -44,11 +44,11 @@ export default function AccessPage() {
               price="$25,000"
               period="/ year"
               features={[
-                "Everything in Explorer",
-                "Full seismic dataset access by block",
-                "Well logs (388 datasets)",
-                "Gravity-magnetic data",
-                "Geological reports by basin"
+                t.accessPage.features.basicBlocks,
+                t.accessPage.features.seismicReports,
+                t.blocksPage.wells,
+                t.geologyPage.dataTitle,
+                t.geologyPage.intro
               ]}
               buttonText={t.accessPage.subscribe}
               variant="filled"
@@ -61,11 +61,11 @@ export default function AccessPage() {
               price="$15,000"
               period="/ engagement"
               features={[
-                "Bespoke package",
-                "Due diligence assistance",
-                "Ministry of Petroleum introduction",
-                "Block attribution support",
-                "Bilingual documentation (FR/EN)"
+                t.accessPage.features.fullGg,
+                t.accessPage.features.priority,
+                t.investPage.contact,
+                t.whyInvest.attribution,
+                t.accessPage.features.matching
               ]}
               buttonText={t.accessPage.requestQuote}
               variant="premium"
@@ -81,9 +81,9 @@ export default function AccessPage() {
       {/* Contact Form */}
       <section className="py-24 bg-background-secondary border-t border-border">
         <div className="max-w-3xl mx-auto px-4">
-          <div className="bg-background-card border border-border p-12 shadow-xl shadow-black/5">
+          <div className="bg-background-card border border-border p-12 shadow-xl shadow-black/5 rtl:text-right">
             <h2 className="text-2xl font-bold uppercase tracking-tight text-accent-green mb-8 text-center">
-              Request Portal Access
+              {t.nav.requestAccess}
             </h2>
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -93,28 +93,28 @@ export default function AccessPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <InputGroup label={t.accessPage.form.country} placeholder="France" />
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-text-muted px-1">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-text-muted px-1 rtl:text-right">
                     {t.accessPage.form.tier}
                   </label>
-                  <select className="bg-background-secondary border border-border p-3 text-sm focus:border-accent-orange outline-none text-text-secondary/70 rounded-none transition-colors">
-                    <option>{t.accessPage.explorer}</option>
-                    <option>{t.accessPage.analyst}</option>
-                    <option>{t.accessPage.investorReady}</option>
+                  <select className="bg-background-secondary border border-border p-3 text-sm focus:border-accent-orange outline-none text-text-secondary/70 rounded-none transition-colors rtl:text-right">
+                    <option>{t.accessPage.form.tiers.exp}</option>
+                    <option>{t.accessPage.form.tiers.ana}</option>
+                    <option>{t.accessPage.form.tiers.inv}</option>
                   </select>
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <label className="text-[10px] font-bold uppercase tracking-widest text-text-muted px-1">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-text-muted px-1 rtl:text-right">
                   {t.accessPage.form.message}
                 </label>
                 <textarea 
                   rows={4}
-                  className="bg-background-secondary border border-border p-3 text-sm focus:border-accent-orange outline-none text-text-secondary/70 rounded-none transition-colors resize-none"
-                  placeholder="How can we help you?"
+                  className="bg-background-secondary border border-border p-3 text-sm focus:border-accent-orange outline-none text-text-secondary/70 rounded-none transition-colors resize-none rtl:text-right"
+                  placeholder="..."
                 />
               </div>
               <button className="w-full bg-accent-orange hover:bg-accent-orange/90 text-white py-4 rounded-sm font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-3">
-                {t.accessPage.form.send} <Send size={16} />
+                {t.accessPage.form.send} <Send size={16} className="rtl:rotate-180" />
               </button>
             </form>
           </div>

@@ -33,20 +33,20 @@ export default function GeologyPage() {
       <section className="py-24 bg-background-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+            <div className="space-y-8 rtl:text-right">
               <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-green">
                 {t.geologyPage.oriental}
               </h2>
               <p className="text-lg text-text-secondary leading-relaxed">
-                The Oriental Basin, primarily the Termit Rift, is Niger&apos;s most prolific oil province. It features a sequence of Cretaceous to Tertiary sediments with excellent reservoir properties in the Sokor and Madama formations.
+                {t.geologyPage.orientalText}
               </p>
               <div className="grid grid-cols-2 gap-8 py-6 border-y border-border">
-                <StatBox label="Fields Discovered" value="106" />
+                <StatBox label={t.geologyPage.stats.basinSize} value="~150k km²" />
                 <StatBox label="2P Reserves" value="815M bbl" />
                 <StatBox label="Drilling Success" value=">90%" />
-                <StatBox label="Avg. Depth" value="1,900m" />
+                <StatBox label={t.geologyPage.stats.depth} value="1,900m" />
               </div>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 rtl:justify-end">
                 {["Sokor", "Madama", "Yogou"].map(fm => (
                   <span key={fm} className="text-[10px] font-bold uppercase tracking-widest border border-accent-green/30 text-accent-green/60 px-3 py-1 rounded-full">
                     {fm} Formation
@@ -80,15 +80,15 @@ export default function GeologyPage() {
                 className="w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
-            <div className="order-1 lg:order-2 space-y-8">
+            <div className="order-1 lg:order-2 space-y-8 rtl:text-right">
               <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-green">
                 {t.geologyPage.occidental}
               </h2>
               <p className="text-lg text-text-secondary leading-relaxed">
-                The Occidental Basin, including the Iullemmeden and Tamesna basins, represents Niger&apos;s frontier potential. While under-explored compared to the East, initial surveys indicate significant structural traps and source rock maturity.
+                {t.geologyPage.occidentalText}
               </p>
               <div className="grid grid-cols-2 gap-8 py-6 border-y border-border">
-                <StatBox label="Status" value="Active Exploration" />
+                <StatBox label={t.blocksPage.status} value={t.blocksPage.available} />
                 <StatBox label="Key Player" value="Sonatrach (Kafra)" />
                 <StatBox label="Potential" value="Frontier" />
                 <StatBox label="Basin Type" value="Intracratonic" />
@@ -106,14 +106,14 @@ export default function GeologyPage() {
               {t.geologyPage.dataAvailable}
             </h2>
             <p className="text-text-muted max-w-2xl mx-auto uppercase tracking-widest text-[10px] font-bold">
-              The Central Data Repository (CDP) holds a comprehensive set of geophysical and geological assets.
+              {t.geologyPage.intro}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-             <DataItem icon={<Layers />} title="2D Seismic" value="40,000 km" />
+             <DataItem icon={<Layers />} title={t.blocksPage.seismic} value="40,000 km" />
              <DataItem icon={<MapIcon />} title="3D Seismic" value="13,000 km²" />
-             <DataItem icon={<Folder />} title="Well Datasets" value="388" />
+             <DataItem icon={<Folder />} title={t.blocksPage.wells} value="388" />
              <DataItem icon={<Database />} title="Gravity-Mag" value="57,000 km" />
           </div>
 

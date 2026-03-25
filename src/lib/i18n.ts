@@ -36,6 +36,7 @@ export const translations = {
     },
     operators: {
       title: "Companies currently operating in Niger",
+      subtitle: "Strategic partners in our nation's progress",
     },
     blocksPage: {
       title: "Available Exploration Blocks",
@@ -48,24 +49,65 @@ export const translations = {
       locked: "Full data sheet available to registered subscribers — Request Access",
       cta: "Access the complete catalog of 37 blocks. Subscribe to the NPDH data portal.",
       subscribe: "Subscribe Now",
+      basin: "Basin",
+      data: "Data",
+      status: "Status",
+      available: "Available",
+      seismic: "Seismic",
+      wells: "Wells",
     },
     geologyPage: {
       title: "Geological Potential",
+      intro: "Explore the rich sedimentary basins of Niger.",
       oriental: "Basin Oriental (Termit, Djado, Chad grabens)",
+      orientalText: "The Oriental basin contains high-potential graben systems with proven oil systems. Recent discoveries confirm significant reserves awaiting further development.",
       occidental: "Basin Occidental (Iullimenden, Tamesna, Tim Mersoï)",
+      occidentalText: "The Occidental basin offers diverse stratigraphic plays and structural traps. Extensive seismic coverage is available for exploration planning.",
+      stats: {
+        basinSize: "Basin size",
+        depth: "Avg. target depth",
+        source: "Source rock type",
+      },
       dataAvailable: "Data Available in the CDP",
+      dataTitle: "Dataset",
+      dataType: "Type",
+      dataDate: "Acquisition",
       cta: "Access Niger's geological database — Request a data subscription",
     },
     investPage: {
       title: "Invest in Niger",
       legal: "Legal Framework",
+      legalText: "Niger provides a stable and modern legal environment for energy investments.",
+      pillars: {
+        code: "Petroleum Code",
+        codeText: "Codified in 2017, offering clarity and protection for international operators.",
+        contracts: "PSC Models",
+        contractsText: "Modern Production Sharing Contract templates with flexible negotiation terms.",
+        content: "Local Content",
+        contentText: "Clear guidelines for local participation and sustainable development.",
+      },
       fiscal: "Fiscal Terms",
+      fiscalParams: {
+        label: "Parameter",
+        value: "Term",
+        royalty: "Royalty",
+        costOil: "Cost Oil Limit",
+        profitOil: "Profit Oil Split",
+        tax: "Corporate Tax",
+      },
       infrastructure: "Infrastructure",
+      infraCards: {
+        sorazTitle: "SORAZ Refinery",
+        sorazText: "Full domestic refining capacity with West African export capabilities.",
+        penbTitle: "PENB Pipeline",
+        penbText: "Direct export route to Atlantic markets, securing logistics for all operators.",
+      },
       cta: "Ready to explore Niger's blocks? Contact the Ministry of Petroleum.",
       contact: "Contact Us",
     },
     accessPage: {
       title: "Subscribe to Niger Petroleum Data Hub",
+      subtitle: "Select the data package that fits your exploration strategy",
       explorer: "Explorer",
       analyst: "Analyst",
       investorReady: "Investor Ready",
@@ -73,6 +115,13 @@ export const translations = {
       subscribe: "Subscribe",
       requestQuote: "Request a Quote",
       confidentiality: "All data access is subject to confidentiality agreements and standard Ministry protocols.",
+      features: {
+        basicBlocks: "Basic block data",
+        seismicReports: "Select seismic reports",
+        fullGg: "Full G&G database",
+        priority: "Priority support",
+        matching: "Strategic matching",
+      },
       form: {
         name: "Name",
         org: "Organization",
@@ -80,15 +129,42 @@ export const translations = {
         tier: "Tier of interest",
         message: "Message",
         send: "Send Request",
+        tiers: {
+          exp: "Explorer Tier",
+          ana: "Analyst Tier",
+          inv: "Investor Ready Tier",
+        }
       },
     },
     newsPage: {
       title: "Sector News",
       readMore: "Read More",
       newsletter: "Subscribe to quarterly bulletin",
+      placeholder: "Your email address",
+      join: "Join",
+      articles: [
+        {
+          title: "Minister Hamadou Tinni Unveils NPDH Roadmap",
+          date: "Feb 24, 2026",
+          excerpt: "Strategic vision for the normalization of oil data access introduced at Niamey energy forum."
+        },
+        {
+          title: "SONIDEP Launches First Upstream Operations",
+          date: "Jun 15, 2024",
+          excerpt: "National oil company begins its journey as an operator in the Agadem basin."
+        },
+        {
+          title: "PENB Export Pipeline Reaches Capacity",
+          date: "Jan 10, 2024",
+          excerpt: "Niger's strategic export route proves vital for West African hydrocarbon logistics."
+        }
+      ]
     },
     footer: {
       contact: "Ministère du Pétrole, Niamey, Niger",
+      quickLinks: "Quick Links",
+      legal: "Legal Notices",
+      privacy: "Privacy Policy",
     },
   },
   fr: {
@@ -128,6 +204,7 @@ export const translations = {
     },
     operators: {
       title: "Entreprises opérant actuellement au Niger",
+      subtitle: "Partenaires stratégiques du progrès de notre nation",
     },
     blocksPage: {
       title: "Blocs d'Exploration Disponibles",
@@ -140,24 +217,65 @@ export const translations = {
       locked: "Fiche complète réservée aux abonnés - Demander l'accès",
       cta: "Accédez au catalogue complet des 37 blocs. Abonnez-vous au portail NPDH.",
       subscribe: "S'abonner maintenant",
+      basin: "Bassin",
+      data: "Données",
+      status: "Statut",
+      available: "Disponible",
+      seismic: "Sismique",
+      wells: "Puits",
     },
     geologyPage: {
       title: "Potentiel Géologique",
+      intro: "Explorez les riches bassins sédimentaires du Niger.",
       oriental: "Bassin Oriental (Termit, Djado, grabens du Tchad)",
+      orientalText: "Le bassin Oriental contient des systèmes de grabens à haut potentiel avec des systèmes pétroliers éprouvés. Les découvertes récentes confirment d'importantes réserves en attente de développement.",
       occidental: "Bassin Occidental (Iullimenden, Tamesna, Tim Mersoï)",
+      occidentalText: "Le bassin Occidental offre divers jeux stratigraphiques et pièges structuraux. Une couverture sismique étendue est disponible pour la planification de l'exploration.",
+      stats: {
+        basinSize: "Taille du bassin",
+        depth: "Prof. cible moy.",
+        source: "Type de roche mère",
+      },
       dataAvailable: "Données disponibles dans le CDP",
+      dataTitle: "Jeu de données",
+      dataType: "Type",
+      dataDate: "Acquisition",
       cta: "Accéder à la base de données géologiques du Niger — Demander un abonnement",
     },
     investPage: {
       title: "Investir au Niger",
       legal: "Cadre juridique",
+      legalText: "Le Niger offre un environnement juridique stable et moderne pour les investissements énergétiques.",
+      pillars: {
+        code: "Code pétrolier",
+        codeText: "Codifié en 2017, offrant clarté et protection aux opérateurs internationaux.",
+        contracts: "Modèles de CPP",
+        contractsText: "Modèles modernes de contrats de partage de production avec des termes de négociation flexibles.",
+        content: "Contenu local",
+        contentText: "Directives claires pour la participation locale et le développement durable.",
+      },
       fiscal: "Régime fiscal",
+      fiscalParams: {
+        label: "Paramètre",
+        value: "Terme",
+        royalty: "Redevance",
+        costOil: "Limite de Cost Oil",
+        profitOil: "Partage du Profit Oil",
+        tax: "Impôt sur les sociétés",
+      },
       infrastructure: "Infrastructures",
+      infraCards: {
+        sorazTitle: "Raffinerie SORAZ",
+        sorazText: "Capacité de raffinage domestique complète avec des capacités d'exportation vers l'Afrique de l'Ouest.",
+        penbTitle: "Pipeline PENB",
+        penbText: "Route d'exportation directe vers les marchés atlantiques, sécurisant la logistique pour tous les opérateurs.",
+      },
       cta: "Prêt à explorer les blocs du Niger ? Contactez le Ministère du Pétrole.",
       contact: "Contactez-nous",
     },
     accessPage: {
       title: "S'abonner au Niger Petroleum Data Hub",
+      subtitle: "Sélectionnez le forfait de données qui correspond à votre stratégie d'exploration",
       explorer: "Explorateur",
       analyst: "Analyste",
       investorReady: "Prêt pour l'Investisseur",
@@ -165,6 +283,13 @@ export const translations = {
       subscribe: "S'abonner",
       requestQuote: "Demander un devis",
       confidentiality: "Tout accès aux données est soumis à des accords de confidentialité et aux protocoles standards du Ministère.",
+      features: {
+        basicBlocks: "Données de base des blocs",
+        seismicReports: "Rapports sismiques sélectionnés",
+        fullGg: "Base de données G&G complète",
+        priority: "Support prioritaire",
+        matching: "Mise en relation stratégique",
+      },
       form: {
         name: "Nom",
         org: "Organisation",
@@ -172,15 +297,42 @@ export const translations = {
         tier: "Niveau d'intérêt",
         message: "Message",
         send: "Envoyer la demande",
+        tiers: {
+          exp: "Niveau Explorateur",
+          ana: "Niveau Analyste",
+          inv: "Niveau Investisseur",
+        }
       },
     },
     newsPage: {
       title: "Actualités du Secteur",
       readMore: "Lire la suite",
       newsletter: "S'abonner au bulletin trimestriel",
+      placeholder: "Votre adresse email",
+      join: "S'abonner",
+      articles: [
+        {
+          title: "Le Ministre Hamadou Tinni dévoile la feuille de route du NPDH",
+          date: "24 fév. 2026",
+          excerpt: "Vision stratégique pour la normalisation de l'accès aux données pétrolières présentée au forum de l'énergie de Niamey."
+        },
+        {
+          title: "La SONIDEP lance ses premières opérations en amont",
+          date: "15 juin 2024",
+          excerpt: "La compagnie pétrolière nationale commence son parcours d'opérateur dans le bassin d'Agadem."
+        },
+        {
+          title: "Le pipeline d'exportation PENB atteint sa capacité",
+          date: "10 janv. 2024",
+          excerpt: "La route d'exportation stratégique du Niger s'avère vitale pour la logistique des hydrocarbures en Afrique de l'Ouest."
+        }
+      ]
     },
     footer: {
       contact: "Ministère du Pétrole, Niamey, Niger",
+      quickLinks: "Liens rapides",
+      legal: "Mentions légales",
+      privacy: "Politique de confidentialité",
     },
   },
   ar: {
@@ -220,6 +372,7 @@ export const translations = {
     },
     operators: {
       title: "الشركات العاملة حالياً في النيجر",
+      subtitle: "شركاء استراتيجيون في تقدم أمتنا",
     },
     blocksPage: {
       title: "مربعات الاستكشاف المتاحة",
@@ -232,24 +385,65 @@ export const translations = {
       locked: "ورقة البيانات الكاملة متاحة للمشتركين المسجلين - طلب الوصول",
       cta: "الوصول إلى الكتالوج الكامل المكون من 37 مربعاً. اشترك في بوابة بيانات NPDH.",
       subscribe: "اشترك الآن",
+      basin: "الحوض",
+      data: "البيانات",
+      status: "الحالة",
+      available: "متاح",
+      seismic: "سيزمي",
+      wells: "آبار",
     },
     geologyPage: {
       title: "الإمكانات الجيولوجية",
+      intro: "استكشف الأحواض الرسوبية الغنية في النيجر.",
       oriental: "الحوض الشرقي (ترميت، ديادو، تشاد)",
+      orientalText: "يحتوي الحوض الشرقي على أنظمة أخدود ذات إمكانات عالية مع أنظمة نفطية مثبتة. تؤكد الاكتشافات الحديثة وجود احتياطيات كبيرة في انتظار مزيد من التطوير.",
       occidental: "الحوض الغربي (إيوليميدن، تامسنا، تيم مرصوي)",
+      occidentalText: "يوفر الحوض الغربي مسرحات جيولوجية متنوعة ومصائد هيكلية. تتوفر تغطية سيزمية واسعة لتخطيط الاستكشاف.",
+      stats: {
+        basinSize: "حجم الحوض",
+        depth: "متوسط العمق المستهدف",
+        source: "نوع الصخور المصدر",
+      },
       dataAvailable: "البيانات المتاحة في CDP",
+      dataTitle: "مجموعة البيانات",
+      dataType: "النوع",
+      dataDate: "الاستحواذ",
       cta: "الوصول إلى قاعدة البيانات الجيولوجية للنيجر - طلب اشتراك بيانات",
     },
     investPage: {
       title: "الاستثمار في النيجر",
       legal: "الإطار القانوني",
+      legalText: "توفر النيجر بيئة قانونية مستقرة وحديثة لاستثمارات الطاقة.",
+      pillars: {
+        code: "قانون البترول",
+        codeText: "تم تقنينه في عام 2017، مما يوفر الوضوح والحماية للمشغلين الدوليين.",
+        contracts: "نماذج عقد مشاركة الإنتاج",
+        contractsText: "نماذج حديثة لعقود مشاركة الإنتاج مع شروط تفاوض مرنة.",
+        content: "المحتوى المحلي",
+        contentText: "إرشادات واضحة للمشاركة المحلية والتنمية المستدامة.",
+      },
       fiscal: "الشروط المالية",
+      fiscalParams: {
+        label: "المعلمة",
+        value: "الشرط",
+        royalty: "عائد الملكية",
+        costOil: "حد استرداد التكاليف",
+        profitOil: "تقاسم زيت الربح",
+        tax: "ضريبة الشركات",
+      },
       infrastructure: "البنية التحتية",
+      infraCards: {
+        sorazTitle: "مصفاة سوراز",
+        sorazText: "قدرة تكرير محلية كاملة مع إمكانيات تصدير لغرب أفريقيا.",
+        penbTitle: "خط أنابيب بينب",
+        penbText: "طريق تصدير مباشر إلى الأسواق الأطلسية، مما يؤمن اللوجستيات لجميع المشغلين.",
+      },
       cta: "هل أنت جاهز لاستكشاف مربعات النيجر؟ اتصل بوزارة البترول.",
       contact: "اتصل بنا",
     },
     accessPage: {
       title: "اشترك في مركز بيانات البترول في النيجر",
+      subtitle: "اختر حزمة البيانات التي تناسب استراتيجية الاستكشاف الخاصة بك",
       explorer: "مستكشف",
       analyst: "محلل",
       investorReady: "جاهز للمستثمر",
@@ -257,6 +451,13 @@ export const translations = {
       subscribe: "اشترك",
       requestQuote: "طلب عرض سعر",
       confidentiality: "يخضع جميع الوصول إلى البيانات لاتفاقيات السرية وبروتوكولات الوزارة القياسية.",
+      features: {
+        basicBlocks: "بيانات المربعات الأساسية",
+        seismicReports: "تقارير سيزمية مختارة",
+        fullGg: "قاعدة بيانات G&G كاملة",
+        priority: "دعم ذو أولوية",
+        matching: "مطابقة استراتيجية",
+      },
       form: {
         name: "الاسم",
         org: "المؤسسة",
@@ -264,15 +465,42 @@ export const translations = {
         tier: "المستوى المهتم به",
         message: "الرسالة",
         send: "إرسال الطلب",
+        tiers: {
+          exp: "فئة المستكشف",
+          ana: "فئة المحلل",
+          inv: "فئة المستثمر الجاهز",
+        }
       },
     },
     newsPage: {
       title: "أخبار القطاع",
       readMore: "اقرأ المزيد",
       newsletter: "اشترك في النشرة الربع سنوية",
+      placeholder: "عنوان بريدك الإلكتروني",
+      join: "انضمام",
+      articles: [
+        {
+          title: "الوزير حمادو تيني يكشف عن خارطة طريق NPDH",
+          date: "24 فبراير 2026",
+          excerpt: "رؤية استراتيجية لتطبيع الوصول إلى بيانات النفط تم تقديمها في منتدى نيامي للطاقة."
+        },
+        {
+          title: "سونيديب تطلق أولى عمليات المنبع",
+          date: "15 يونيو 2024",
+          excerpt: "شركة النفط الوطنية تبدأ مسيرتها كمشغل في حوض أغاديم."
+        },
+        {
+          title: "خط أنابيب تصدير بينب يصل إلى طاقته القصوى",
+          date: "10 يناير 2024",
+          excerpt: "ثبت أن طريق التصدير الاستراتيجي للنيجر حيوي للوجستيات الهيدروكربونات في غرب أفريقيا."
+        }
+      ]
     },
     footer: {
       contact: "وزارة البترول، نيامي، النيجر",
+      quickLinks: "روابط سريعة",
+      legal: "إشعارات قانونية",
+      privacy: "سياسة الخصوصية",
     },
   },
 };

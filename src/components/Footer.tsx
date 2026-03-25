@@ -36,13 +36,13 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-white/50 max-w-xs leading-relaxed">
-              Official Nigerien government platform for oil and gas sector data, investment opportunities, and legislative frameworks.
+              {t.hero.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-8">
             <div className="space-y-4">
-              <h4 className="text-xs font-bold uppercase tracking-widest text-accent-orange">Navigation</h4>
+              <h4 className="text-xs font-bold uppercase tracking-widest text-accent-orange">{t.footer.quickLinks}</h4>
               <ul className="space-y-2">
                 {navLinks.slice(0, 3).map((link) => (
                   <li key={link.href}>
@@ -67,7 +67,7 @@ export default function Footer() {
           </div>
 
           <div className="space-y-6">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-accent-orange">Contact Information</h4>
+            <h4 className="text-xs font-bold uppercase tracking-widest text-accent-orange">{t.footer.contact}</h4>
             <p className="text-sm text-white/60 leading-relaxed">
               {t.footer.contact}
             </p>
@@ -78,11 +78,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-white/30 font-bold">
-          <p>© {new Date().getFullYear()} Ministère du Pétrole du Niger. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} {t.footer.contact}. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-6">
-             <span>Terms of Service</span>
-             <span>Privacy Policy</span>
-             <span>Cookies</span>
+             <span>{t.footer.legal}</span>
+             <span>{t.footer.privacy}</span>
           </div>
         </div>
       </div>

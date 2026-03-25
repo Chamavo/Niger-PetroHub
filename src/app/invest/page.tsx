@@ -38,18 +38,18 @@ export default function InvestPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <LegalCard 
               icon={<Scale />} 
-              title="Petroleum Code 2017" 
-              desc="Modern legislation providing clarity on exploration rights, environmental obligations, and local content requirements."
+              title={t.investPage.pillars.code} 
+              desc={t.investPage.pillars.codeText}
             />
             <LegalCard 
               icon={<FileText />} 
-              title="Production Sharing Contract" 
-              desc="Standard PSC terms with flexible royalty-tax structures tailored to both rift and frontier basin economics."
+              title={t.investPage.pillars.contracts} 
+              desc={t.investPage.pillars.contractsText}
             />
             <LegalCard 
               icon={<Shield />} 
-              title="Stabilization & Arbitration" 
-              desc="Robust legal protections including fiscal stabilization clauses and international arbitration (ICSID/OHADA)."
+              title={t.investPage.pillars.content} 
+              desc={t.investPage.pillars.contentText}
             />
           </div>
         </div>
@@ -62,21 +62,19 @@ export default function InvestPage() {
             {t.investPage.fiscal}
           </h2>
           <div className="overflow-x-auto border border-border">
-            <table className="w-full text-left border-collapse">
+            <table className="w-full text-left border-collapse rtl:text-right">
               <thead>
                 <tr className="bg-background-primary border-b border-border">
-                  <th className="p-6 text-xs font-bold uppercase tracking-widest text-accent-green">Item</th>
-                  <th className="p-6 text-xs font-bold uppercase tracking-widest text-accent-green">Terms</th>
+                  <th className="p-6 text-xs font-bold uppercase tracking-widest text-accent-green rtl:text-right">{t.investPage.fiscalParams.label}</th>
+                  <th className="p-6 text-xs font-bold uppercase tracking-widest text-accent-green rtl:text-right">{t.investPage.fiscalParams.value}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border">
-                <FiscalRow item="Royalty" terms="12.5%" />
-                <FiscalRow item="Tax Oil" terms="40% – 60%" />
-                <FiscalRow item="Cost Stop" terms="70%" />
-                <FiscalRow item="VAT & Customs" terms="Exempt (Exploration + First 5 years production)" />
-                <FiscalRow item="Block Attribution Delay" terms="~3 Months" />
-                <FiscalRow item="Exploration Period" terms="Up to 10 Years" />
-                <FiscalRow item="Production Period" terms="Minimum 25 Years" />
+                <FiscalRow item={t.investPage.fiscalParams.royalty} terms="12.5%" />
+                <FiscalRow item={t.investPage.fiscalParams.costOil} terms="70%" />
+                <FiscalRow item={t.investPage.fiscalParams.profitOil} terms="40% – 60%" />
+                <FiscalRow item={t.investPage.fiscalParams.tax} terms="30%" />
+                <FiscalRow item={t.whyInvest.attribution} terms="~3 Months" />
               </tbody>
             </table>
           </div>
@@ -92,13 +90,13 @@ export default function InvestPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <InfrastructureCard 
               image="/photo-soraz-refinery.jpg"
-              title="SORAZ Refinery — Zinder"
-              desc="20,000 bpd capacity supplying domestic and regional markets with high-quality refined products."
+              title={t.investPage.infraCards.sorazTitle}
+              desc={t.investPage.infraCards.sorazText}
             />
             <InfrastructureCard 
               image="/photo-pipeline-agadem.jpg"
-              title="PENB Export Pipeline"
-              desc="1,950 km strategic route from Agadem to Sèmè (Benin), unlocking global export potential for Nigerien crude."
+              title={t.investPage.infraCards.penbTitle}
+              desc={t.investPage.infraCards.penbText}
             />
           </div>
         </div>

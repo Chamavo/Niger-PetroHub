@@ -3,6 +3,7 @@
 import React from "react";
 import { useI18n } from "@/components/I18nProvider";
 import PlaceholderImage from "@/components/PlaceholderImage";
+import Link from "next/link";
 import { ArrowRight, CheckCircle2, Factory, Gavel, Globe, ShieldCheck, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -24,7 +25,6 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center">
-
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-4 uppercase">
             {t.hero.title}
           </h1>
@@ -33,15 +33,13 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button className="bg-accent-orange hover:bg-accent-orange/90 text-white px-8 py-4 rounded-sm font-bold uppercase transition-all flex items-center gap-2">
-              {t.hero.explore} <ArrowRight size={18} />
+              {t.hero.explore} {locale === 'ar' ? <ArrowRight size={18} className="rotate-180" /> : <ArrowRight size={18} />}
             </button>
             <button className="border border-white text-white hover:bg-white hover:text-accent-orange px-8 py-4 rounded-sm font-bold uppercase transition-all">
               {t.hero.request}
             </button>
           </div>
         </div>
-
-
       </section>
 
       {/* Stats Bar */}
@@ -60,7 +58,7 @@ export default function HomePage() {
       <section className="py-24 bg-background-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+            <div className="space-y-8 rtl:text-right">
               <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight text-accent-green">
                 {t.potential.title}
               </h2>
@@ -71,7 +69,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative group">
-              <div className="absolute -inset-4 border border-accent-orange/20 translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500" />
+              <div className="absolute -inset-4 border border-accent-orange/20 translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500 rtl:-translate-x-4" />
               <div className="border-4 border-accent-orange p-1">
                 <PlaceholderImage
                   src="/map-bassins-niger.jpg"
@@ -131,29 +129,29 @@ export default function HomePage() {
       {/* Latest News */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-12">
+          <div className="flex justify-between items-end mb-12 rtl:flex-row-reverse">
             <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-green">
-              Latest News
+              {t.newsPage.title}
             </h2>
-            <button className="text-accent-orange hover:underline text-sm font-bold uppercase tracking-widest">
-              View All
-            </button>
+            <Link href="/news" className="text-accent-orange hover:underline text-sm font-bold uppercase tracking-widest">
+              {t.blocksPage.filterAll}
+            </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <NewsCard 
-              date="Feb 24, 2026"
-              title="Minister Hamadou Tinni Unveils NPDH Roadmap"
-              excerpt="Strategic vision for the normalization of oil data access introduced at Niamey energy forum."
+              date={t.newsPage.articles[0].date}
+              title={t.newsPage.articles[0].title}
+              excerpt={t.newsPage.articles[0].excerpt}
             />
             <NewsCard 
-              date="Jun 15, 2024"
-              title="SONIDEP Launches First Upstream Operations"
-              excerpt="National oil company begins its journey as an operator in the Agadem basin."
+              date={t.newsPage.articles[1].date}
+              title={t.newsPage.articles[1].title}
+              excerpt={t.newsPage.articles[1].excerpt}
             />
             <NewsCard 
-              date="Jan 10, 2024"
-              title="PENB Export Pipeline Reaches Capacity"
-              excerpt="Niger's strategic export route proves vital for West African hydrocarbon logistics."
+              date={t.newsPage.articles[2].date}
+              title={t.newsPage.articles[2].title}
+              excerpt={t.newsPage.articles[2].excerpt}
             />
           </div>
         </div>

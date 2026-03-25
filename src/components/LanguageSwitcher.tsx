@@ -8,18 +8,20 @@ export default function LanguageSwitcher() {
   const { locale, setLocale } = useI18n();
 
   return (
-    <div className="flex items-center gap-2 text-sm font-medium">
+    <div className="flex items-center gap-3 text-sm font-bold">
       {(["fr", "en", "ar"] as const).map((lang, index) => (
         <React.Fragment key={lang}>
           <button
             onClick={() => setLocale(lang as Locale)}
-            className={`transition-colors uppercase ${
-              locale === lang ? "text-accent" : "text-foreground/60 hover:text-foreground"
+            className={`transition-all uppercase tracking-widest ${
+              locale === lang 
+                ? "text-accent-orange scale-110" 
+                : "text-white/70 hover:text-white"
             }`}
           >
-            {lang === "ar" ? "عربي" : lang}
+            {lang === "ar" ? "AR" : lang}
           </button>
-          {index < 2 && <span className="text-border">|</span>}
+          {index < 2 && <span className="text-white/20">|</span>}
         </React.Fragment>
       ))}
     </div>
