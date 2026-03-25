@@ -19,10 +19,10 @@ export default function GeologyPage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/70 z-10" />
+          <div className="absolute inset-0 bg-background-primary/60 z-10" />
         </div>
         <div className="relative z-20 text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-white px-4">
+          <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-text-primary px-4">
             {t.geologyPage.title}
           </h1>
           <div className="h-1 w-24 bg-accent-green mx-auto" />
@@ -34,10 +34,10 @@ export default function GeologyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-orange">
+              <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-green">
                 {t.geologyPage.oriental}
               </h2>
-              <p className="text-lg text-text-secondary/70 leading-relaxed">
+              <p className="text-lg text-text-secondary leading-relaxed">
                 The Oriental Basin, primarily the Termit Rift, is Niger&apos;s most prolific oil province. It features a sequence of Cretaceous to Tertiary sediments with excellent reservoir properties in the Sokor and Madama formations.
               </p>
               <div className="grid grid-cols-2 gap-8 py-6 border-y border-border">
@@ -48,7 +48,7 @@ export default function GeologyPage() {
               </div>
               <div className="flex flex-wrap gap-3">
                 {["Sokor", "Madama", "Yogou"].map(fm => (
-                  <span key={fm} className="text-[10px] font-bold uppercase tracking-widest border border-accent-orange/30 text-accent-orange/60 px-3 py-1 rounded-full">
+                  <span key={fm} className="text-[10px] font-bold uppercase tracking-widest border border-accent-green/30 text-accent-green/60 px-3 py-1 rounded-full">
                     {fm} Formation
                   </span>
                 ))}
@@ -81,10 +81,10 @@ export default function GeologyPage() {
               />
             </div>
             <div className="order-1 lg:order-2 space-y-8">
-              <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-orange">
+              <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-green">
                 {t.geologyPage.occidental}
               </h2>
-              <p className="text-lg text-text-secondary/70 leading-relaxed">
+              <p className="text-lg text-text-secondary leading-relaxed">
                 The Occidental Basin, including the Iullemmeden and Tamesna basins, represents Niger&apos;s frontier potential. While under-explored compared to the East, initial surveys indicate significant structural traps and source rock maturity.
               </p>
               <div className="grid grid-cols-2 gap-8 py-6 border-y border-border">
@@ -102,10 +102,10 @@ export default function GeologyPage() {
       <section className="py-24 bg-background-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-orange mb-4">
+            <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-green mb-4">
               {t.geologyPage.dataAvailable}
             </h2>
-            <p className="text-text-secondary/50 max-w-2xl mx-auto uppercase tracking-widest text-[10px] font-bold">
+            <p className="text-text-muted max-w-2xl mx-auto uppercase tracking-widest text-[10px] font-bold">
               The Central Data Repository (CDP) holds a comprehensive set of geophysical and geological assets.
             </p>
           </div>
@@ -118,7 +118,7 @@ export default function GeologyPage() {
           </div>
 
           <div className="mt-20 flex flex-col items-center">
-             <button className="bg-accent-orange text-text-primary px-12 py-5 rounded-sm font-bold uppercase tracking-widest shadow-xl shadow-accent-orange/10 hover:shadow-accent-orange/20 transition-all">
+             <button className="bg-accent-orange text-white px-12 py-5 rounded-sm font-bold uppercase tracking-widest shadow-xl shadow-accent-orange/10 hover:shadow-accent-orange/20 transition-all">
                 {t.geologyPage.cta}
              </button>
           </div>
@@ -131,7 +131,7 @@ export default function GeologyPage() {
 function StatBox({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <span className="block text-[10px] uppercase tracking-widest text-text-secondary/40 font-bold mb-1">{label}</span>
+      <span className="block text-[10px] uppercase tracking-widest text-text-muted font-bold mb-1">{label}</span>
       <span className="text-xl font-bold text-text-primary">{value}</span>
     </div>
   );
@@ -139,7 +139,7 @@ function StatBox({ label, value }: { label: string; value: string }) {
 
 function DataItem({ icon, title, value }: { icon: React.ReactNode; title: string; value: string }) {
   return (
-    <div className="bg-background-secondary p-8 border border-border flex flex-col items-center text-center gap-4 group hover:bg-accent-green/5 transition-all">
+    <div className="bg-background-card p-8 border border-border flex flex-col items-center text-center gap-4 group hover:bg-accent-green/5 transition-all">
        <div className="text-accent-green group-hover:scale-110 transition-transform">{icon}</div>
        <div>
          <span className="block text-2xl font-black text-text-primary tracking-tighter">{value}</span>

@@ -20,7 +20,7 @@ export default function HomePage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/60 z-10" />
+          <div className="absolute inset-0 bg-background-primary/40 z-10" />
         </div>
 
         <div className="relative z-20 container mx-auto px-4 text-center flex flex-col items-center">
@@ -31,24 +31,24 @@ export default function HomePage() {
             height={80}
             className="mb-8 object-contain"
           />
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-4 uppercase">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-text-primary mb-4 uppercase">
             {t.hero.title}
           </h1>
-          <p className="text-lg md:text-xl text-text-secondary/80 max-w-2xl mb-10">
+          <p className="text-lg md:text-xl text-text-secondary max-w-2xl mb-10">
             {t.hero.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-accent-orange hover:bg-accent-orange/90 text-text-primary px-8 py-4 rounded-sm font-bold uppercase transition-all flex items-center gap-2">
+            <button className="bg-accent-orange hover:bg-accent-orange/90 text-white px-8 py-4 rounded-sm font-bold uppercase transition-all flex items-center gap-2">
               {t.hero.explore} <ArrowRight size={18} />
             </button>
-            <button className="border border-accent-orange text-accent-orange hover:bg-accent-orange hover:text-text-primary px-8 py-4 rounded-sm font-bold uppercase transition-all">
+            <button className="border border-accent-orange text-accent-orange hover:bg-accent-orange hover:text-white px-8 py-4 rounded-sm font-bold uppercase transition-all">
               {t.hero.request}
             </button>
           </div>
         </div>
 
         {/* Language Switcher Overlay (Top Right Sticky) */}
-        <div className="absolute top-8 right-8 z-50 bg-background-primary/20 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full hidden lg:block">
+        <div className="absolute top-8 right-8 z-50 bg-background-card/80 backdrop-blur-sm border border-border px-4 py-2 rounded-full hidden lg:block">
            <div className="flex gap-4 text-xs font-bold uppercase">
              <button className="hover:text-accent-orange transition-colors">FR</button>
              <button className="hover:text-accent-orange transition-colors">EN</button>
@@ -74,10 +74,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight text-accent-orange">
+              <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight text-accent-green">
                 {t.potential.title}
               </h2>
-              <div className="space-y-6 text-text-secondary/70 leading-relaxed md:text-lg">
+              <div className="space-y-6 text-text-secondary leading-relaxed md:text-lg">
                 <p>{t.potential.p1}</p>
                 <p>{t.potential.p2}</p>
                 <p>{t.potential.p3}</p>
@@ -102,7 +102,7 @@ export default function HomePage() {
       {/* Why Invest in Niger */}
       <section className="py-24 bg-background-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight text-accent-orange text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight text-accent-green text-center mb-16">
             {t.whyInvest.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -145,7 +145,7 @@ export default function HomePage() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-12">
-            <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-orange">
+            <h2 className="text-3xl font-bold uppercase tracking-tight text-accent-green">
               Latest News
             </h2>
             <button className="text-accent-orange hover:underline text-sm font-bold uppercase tracking-widest">
@@ -181,7 +181,7 @@ function StatItem({ value, label }: { value: string; label: string }) {
       <div className="text-4xl md:text-5xl font-black text-accent-orange tracking-tighter">
         {value}
       </div>
-      <div className="text-[10px] md:text-xs uppercase tracking-widest text-text-secondary/40 font-bold max-w-[120px] mx-auto">
+      <div className="text-[10px] md:text-xs uppercase tracking-widest text-text-secondary font-bold max-w-[120px] mx-auto">
         {label}
       </div>
     </div>
@@ -190,11 +190,11 @@ function StatItem({ value, label }: { value: string; label: string }) {
 
 function WhyInvestCard({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
-    <div className="bg-background-primary p-8 border border-border flex items-start gap-6 hover:border-accent-orange/40 transition-colors group">
-      <div className="p-4 bg-accent-orange/5 rounded-sm group-hover:bg-accent-orange/10 transition-colors">
+    <div className="bg-background-card p-8 border border-border flex items-start gap-6 hover:border-accent-orange/40 transition-colors group">
+      <div className="p-4 bg-accent-green/5 rounded-sm group-hover:bg-accent-green/10 transition-colors">
         {icon}
       </div>
-      <p className="text-lg font-medium text-text-secondary/80 leading-snug">
+      <p className="text-lg font-medium text-text-secondary leading-snug">
         {text}
       </p>
     </div>
@@ -203,17 +203,17 @@ function WhyInvestCard({ icon, text }: { icon: React.ReactNode; text: string }) 
 
 function NewsCard({ date, title, excerpt }: { date: string; title: string; excerpt: string }) {
   return (
-    <div className="bg-background-secondary border border-border p-8 flex flex-col gap-6 hover:bg-border/20 transition-all cursor-pointer group">
+    <div className="bg-background-card border border-border p-8 flex flex-col gap-6 hover:bg-background-secondary transition-all cursor-pointer group">
       <div className="space-y-4">
-        <span className="text-[10px] font-bold text-accent-orange uppercase tracking-widest">{date}</span>
+        <span className="text-[10px] font-bold text-accent-green uppercase tracking-widest">{date}</span>
         <h3 className="text-xl font-bold leading-tight group-hover:text-accent-orange transition-colors">
           {title}
         </h3>
-        <p className="text-sm text-text-secondary/50 line-clamp-2">
+        <p className="text-sm text-text-secondary line-clamp-2">
           {excerpt}
         </p>
       </div>
-      <div className="mt-auto flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-text-secondary/40 group-hover:text-accent-orange">
+      <div className="mt-auto flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-text-muted group-hover:text-accent-orange">
         Read More <ArrowRight size={14} />
       </div>
     </div>

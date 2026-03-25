@@ -21,7 +21,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-background-primary/80 backdrop-blur-md border-b border-border">
+    <nav className="sticky top-0 z-50 w-full bg-nav/95 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -33,7 +33,7 @@ export default function Navbar() {
               height={40}
               className="object-contain"
             />
-            <span className="text-xl font-bold tracking-tighter text-text-primary group-hover:text-accent-orange transition-colors">
+            <span className="text-xl font-bold tracking-tighter text-white group-hover:text-accent-orange transition-colors">
               NPDH
             </span>
           </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-text-secondary/70 hover:text-accent-orange transition-colors"
+                  className="text-sm font-medium text-white/70 hover:text-accent-orange transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -58,7 +58,7 @@ export default function Navbar() {
               <LanguageSwitcher />
               <Link
                 href="/access"
-                className="bg-accent-orange hover:bg-accent-orange/90 text-text-primary px-5 py-2.5 rounded-sm text-sm font-bold uppercase transition-all"
+                className="bg-accent-orange hover:bg-accent-orange/90 text-white px-5 py-2.5 rounded-sm text-sm font-bold uppercase transition-all"
               >
                 {t.nav.requestAccess}
               </Link>
@@ -70,7 +70,7 @@ export default function Navbar() {
             <LanguageSwitcher />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-text-secondary/70 hover:text-accent-orange"
+              className="p-2 text-white/70 hover:text-accent-orange"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -80,14 +80,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-20 z-40 bg-background-primary flex flex-col p-6 animate-in slide-in-from-top duration-300">
+        <div className="lg:hidden fixed inset-0 top-20 z-40 bg-nav flex flex-col p-6 animate-in slide-in-from-top duration-300">
           <div className="flex flex-col gap-6 items-center pt-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-2xl font-bold text-text-primary hover:text-accent-orange transition-colors"
+                className="text-2xl font-bold text-white hover:text-accent-orange transition-colors"
               >
                 {link.name}
               </Link>
@@ -96,7 +96,7 @@ export default function Navbar() {
             <Link
               href="/access"
               onClick={() => setIsMenuOpen(false)}
-              className="w-full text-center bg-accent-orange text-text-primary px-5 py-4 rounded-sm text-lg font-bold uppercase"
+              className="w-full text-center bg-accent-orange text-white px-5 py-4 rounded-sm text-lg font-bold uppercase"
             >
               {t.nav.requestAccess}
             </Link>

@@ -12,7 +12,7 @@ export default function AccessPage() {
       {/* Page Header */}
       <section className="py-24 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-accent-orange mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tight text-accent-green mb-6 leading-tight">
             {t.accessPage.title}
           </h1>
           <div className="h-1 w-24 bg-accent-green mx-auto" />
@@ -72,7 +72,7 @@ export default function AccessPage() {
             />
           </div>
 
-          <p className="mt-16 text-center text-sm text-text-secondary/40 max-w-2xl mx-auto italic">
+          <p className="mt-16 text-center text-sm text-text-muted max-w-2xl mx-auto italic">
             {t.accessPage.confidentiality}
           </p>
         </div>
@@ -81,8 +81,8 @@ export default function AccessPage() {
       {/* Contact Form */}
       <section className="py-24 bg-background-secondary border-t border-border">
         <div className="max-w-3xl mx-auto px-4">
-          <div className="bg-background-primary border border-border p-12 shadow-2xl shadow-black/50">
-            <h2 className="text-2xl font-bold uppercase tracking-tight text-accent-orange mb-8 text-center">
+          <div className="bg-background-card border border-border p-12 shadow-xl shadow-black/5">
+            <h2 className="text-2xl font-bold uppercase tracking-tight text-accent-green mb-8 text-center">
               Request Portal Access
             </h2>
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
@@ -93,7 +93,7 @@ export default function AccessPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <InputGroup label={t.accessPage.form.country} placeholder="France" />
                 <div className="flex flex-col gap-2">
-                  <label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 px-1">
+                  <label className="text-[10px] font-bold uppercase tracking-widest text-text-muted px-1">
                     {t.accessPage.form.tier}
                   </label>
                   <select className="bg-background-secondary border border-border p-3 text-sm focus:border-accent-orange outline-none text-text-secondary/70 rounded-none transition-colors">
@@ -104,7 +104,7 @@ export default function AccessPage() {
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <label className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 px-1">
+                <label className="text-[10px] font-bold uppercase tracking-widest text-text-muted px-1">
                   {t.accessPage.form.message}
                 </label>
                 <textarea 
@@ -113,7 +113,7 @@ export default function AccessPage() {
                   placeholder="How can we help you?"
                 />
               </div>
-              <button className="w-full bg-accent-orange hover:bg-accent-orange/90 text-text-primary py-4 rounded-sm font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-3">
+              <button className="w-full bg-accent-orange hover:bg-accent-orange/90 text-white py-4 rounded-sm font-bold uppercase tracking-widest transition-all flex items-center justify-center gap-3">
                 {t.accessPage.form.send} <Send size={16} />
               </button>
             </form>
@@ -126,24 +126,24 @@ export default function AccessPage() {
 
 function TierCard({ title, price, period, features, buttonText, variant, popular = false }: any) {
   const styles = {
-    outline: "border border-accent-orange/30 bg-background-primary",
-    filled: "border-2 border-accent-orange bg-accent-orange/5",
-    premium: "border border-border bg-background-secondary"
+    outline: "border border-border bg-background-card",
+    filled: "border-2 border-accent-orange bg-background-card",
+    premium: "border border-accent-green bg-background-card"
   };
 
   return (
     <div className={`relative p-10 flex flex-col h-full hover:translate-y-[-8px] transition-all duration-300 ${styles[variant as keyof typeof styles]}`}>
       {popular && (
-        <div className="absolute top-0 right-10 -translate-y-1/2 bg-accent-orange text-text-primary text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1 flex items-center gap-2">
+        <div className="absolute top-0 right-10 -translate-y-1/2 bg-accent-orange text-white text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1 flex items-center gap-2">
           <Star size={12} fill="currentColor" /> Popular
         </div>
       )}
       
       <div className="mb-8">
-        <h3 className="text-xs font-black uppercase tracking-[0.3em] text-accent-orange mb-2">{title}</h3>
+        <h3 className="text-xs font-black uppercase tracking-[0.3em] text-accent-green mb-2">{title}</h3>
         <div className="flex items-baseline gap-1">
           <span className="text-4xl font-black text-text-primary tracking-tighter">{price}</span>
-          <span className="text-sm font-bold text-text-secondary/30 uppercase">{period}</span>
+          <span className="text-sm font-bold text-text-muted uppercase">{period}</span>
         </div>
       </div>
 
@@ -157,7 +157,7 @@ function TierCard({ title, price, period, features, buttonText, variant, popular
       </ul>
 
       <button className={`w-full py-4 rounded-sm text-xs font-black uppercase tracking-widest transition-all ${
-        variant === 'filled' ? 'bg-accent-orange text-text-primary hover:bg-accent-orange/90' : 'border border-accent-orange text-accent-orange hover:bg-accent-orange hover:text-text-primary'
+        variant === 'filled' ? 'bg-accent-orange text-white hover:bg-accent-orange/90' : 'border border-accent-orange text-accent-orange hover:bg-accent-orange hover:text-white'
       }`}>
         {buttonText}
       </button>
@@ -168,7 +168,7 @@ function TierCard({ title, price, period, features, buttonText, variant, popular
 function InputGroup({ label, placeholder }: { label: string; placeholder: string }) {
   return (
     <div className="flex flex-col gap-2">
-      <label className="text-[10px] font-bold uppercase tracking-widest text-text-secondary/40 px-1">
+      <label className="text-[10px] font-bold uppercase tracking-widest text-text-muted px-1">
         {label}
       </label>
       <input 

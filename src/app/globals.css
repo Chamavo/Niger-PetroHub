@@ -2,9 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background-primary: #F5F2ED;
+  --background-secondary: #EAE5DC;
+  --background-card: #FFFFFF;
+  --accent-orange: #E8501A;
+  --accent-green: #2E6B2E;
+  --text-primary: #1C1C1C;
+  --text-secondary: #4A4A4A;
+  --text-muted: #7A7A7A;
+  --border: #D5CFC4;
+  --nav: #1C1C1C;
+}
+
 @layer base {
   body {
-    @apply bg-background-primary text-text-secondary;
+    background-color: var(--background-primary) !important;
+    color: var(--text-primary) !important;
   }
 }
 

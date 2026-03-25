@@ -10,21 +10,22 @@ const config: Config = {
     extend: {
       colors: {
         background: {
-          primary: '#1A1A1A',
-          secondary: '#222222',
-          card: '#2A2A2A',
+          primary: 'var(--background-primary)',
+          secondary: 'var(--background-secondary)',
+          card: 'var(--background-card)',
         },
         accent: {
-          orange: '#E8501A',
-          green: '#3A7D3A',
-          'green-light': '#4A9A4A',
+          orange: 'var(--accent-orange)',
+          green: 'var(--accent-green)',
+          'green-light': '#3A8A3A',
         },
         text: {
-          primary: '#FFFFFF',
-          secondary: '#E8E0CC',
-          muted: '#A0A0A0',
+          primary: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          muted: 'var(--text-muted)',
         },
-        border: '#333333',
+        border: 'var(--border)',
+        nav: 'var(--nav)',
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
