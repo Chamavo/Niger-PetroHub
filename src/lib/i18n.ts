@@ -10,7 +10,7 @@ export const translations = {
       requestAccess: "Request Access",
     },
     hero: {
-      title: "NIGER PETROLEUM DATA HUB",
+      title: "NIGER PETROLEUM DATA CENTRE",
       subtitle: "The official gateway to Niger's hydrocarbon exploration data",
       explore: "Explore Blocks",
       request: "Request Access",
@@ -47,7 +47,7 @@ export const translations = {
       area: "Area",
       viewData: "View Full Data Sheet",
       locked: "Full data sheet available to registered subscribers — Request Access",
-      cta: "Access the complete catalog of 37 blocks. Subscribe to the NPDH data portal.",
+      cta: "Access the complete catalog of 37 blocks. Subscribe to the CDP data portal.",
       subscribe: "Subscribe Now",
       basin: "Basin",
       data: "Data",
@@ -106,7 +106,7 @@ export const translations = {
       contact: "Contact Us",
     },
     accessPage: {
-      title: "Subscribe to Niger Petroleum Data Hub",
+      title: "Subscribe to Niger Petroleum Data Centre",
       subtitle: "Select the data package that fits your exploration strategy",
       explorer: "Explorer",
       analyst: "Analyst",
@@ -144,7 +144,7 @@ export const translations = {
       join: "Join",
       articles: [
         {
-          title: "Minister Hamadou Tinni Unveils NPDH Roadmap",
+          title: "Minister Hamadou Tinni Unveils CDP Roadmap",
           date: "Feb 24, 2026",
           excerpt: "Strategic vision for the normalization of oil data access introduced at Niamey energy forum."
         },
@@ -178,7 +178,7 @@ export const translations = {
       requestAccess: "Demander l'accès",
     },
     hero: {
-      title: "NIGER PETROLEUM DATA HUB",
+      title: "CENTRE DE DONNÉES PÉTROLIÈRES",
       subtitle: "Le portail officiel des données d'exploration pétrolière du Niger",
       explore: "Explorer les Blocs",
       request: "Demander l'accès",
@@ -215,7 +215,7 @@ export const translations = {
       area: "Superficie",
       viewData: "Voir la fiche de données",
       locked: "Fiche complète réservée aux abonnés - Demander l'accès",
-      cta: "Accédez au catalogue complet des 37 blocs. Abonnez-vous au portail NPDH.",
+      cta: "Accédez au catalogue complet des 37 blocs. Abonnez-vous au portail CDP.",
       subscribe: "S'abonner maintenant",
       basin: "Bassin",
       data: "Données",
@@ -274,7 +274,7 @@ export const translations = {
       contact: "Contactez-nous",
     },
     accessPage: {
-      title: "S'abonner au Niger Petroleum Data Hub",
+      title: "S'abonner au Centre de Données Pétrolières",
       subtitle: "Sélectionnez le forfait de données qui correspond à votre stratégie d'exploration",
       explorer: "Explorateur",
       analyst: "Analyste",
@@ -312,7 +312,7 @@ export const translations = {
       join: "S'abonner",
       articles: [
         {
-          title: "Le Ministre Hamadou Tinni dévoile la feuille de route du NPDH",
+          title: "Le Ministre Hamadou Tinni dévoile la feuille de route du CDP",
           date: "24 fév. 2026",
           excerpt: "Vision stratégique pour la normalisation de l'accès aux données pétrolières présentée au forum de l'énergie de Niamey."
         },
@@ -383,7 +383,7 @@ export const translations = {
       area: "المساحة",
       viewData: "عرض ورقة البيانات الكاملة",
       locked: "ورقة البيانات الكاملة متاحة للمشتركين المسجلين - طلب الوصول",
-      cta: "الوصول إلى الكتالوج الكامل المكون من 37 مربعاً. اشترك في بوابة بيانات NPDH.",
+      cta: "الوصول إلى الكتالوج الكامل المكون من 37 مربعاً. اشترك في بوابة بيانات CDP.",
       subscribe: "اشترك الآن",
       basin: "الحوض",
       data: "البيانات",
@@ -480,7 +480,7 @@ export const translations = {
       join: "انضمام",
       articles: [
         {
-          title: "الوزير حمادو تيني يكشف عن خارطة طريق NPDH",
+          title: "الوزير حمادو تيني يكشف عن خارطة طريق CDP",
           date: "24 فبراير 2026",
           excerpt: "رؤية استراتيجية لتطبيع الوصول إلى بيانات النفط تم تقديمها في منتدى نيامي للطاقة."
         },

@@ -13,7 +13,7 @@ const notoArabic = Noto_Sans_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: "Niger Petroleum Data Hub (NPDH)",
+  title: "Centre de Données Pétrolières (CDP)",
   description: "The official gateway to Niger's hydrocarbon exploration data",
 };
 

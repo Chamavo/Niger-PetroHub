@@ -27,13 +27,13 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <PlaceholderImage
               src="/logo-ministere-petrole-niger.png"
-              alt="NPDH Logo"
+              alt="CDP Logo"
               width={40}
               height={40}
               className="object-contain"
             />
             <span className="text-xl font-bold tracking-tighter text-white group-hover:text-accent-orange transition-colors">
-              NPDH
+              CDP
             </span>
           </Link>
 

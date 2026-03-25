@@ -26,13 +26,13 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <PlaceholderImage
                 src="/logo-ministere-petrole-niger.png"
-                alt="NPDH Logo"
+                alt="CDP Logo"
                 width={50}
                 height={50}
                 className="object-contain"
               />
               <span className="text-xl font-bold tracking-tighter text-white">
-                NPDH
+                CDP
               </span>
             </div>
             <p className="text-sm text-white/50 max-w-xs leading-relaxed">
